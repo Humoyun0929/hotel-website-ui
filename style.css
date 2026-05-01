@@ -1,0 +1,278 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.navbar .logo h1 {
+  color: #fbbf24;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.menu a {
+  margin: 0 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #fbbf24;
+}
+
+.book-btn {
+  background: #fbbf24;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #fbbf24;
+  animation: fadeDown 1s ease;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 10px 0 20px;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: #fbbf24;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #fbbf24;
+}
+
+/* ROOM CARD */
+.room-card {
+  display: flex;
+  background: #1e293b;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+}
+
+.room-card img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.room-info h3 {
+  color: #fbbf24;
+  margin-bottom: 10px;
+}
+
+.room-info ul {
+  margin: 10px 0;
+  padding-left: 18px;
+}
+
+.price {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.service:hover {
+  background: #fbbf24;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* REVIEWS */
+.review {
+  background: #1e293b;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+/* CONTACT */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+form button {
+  background: #fbbf24;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #fff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #0b1220;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #fbbf24;
+  text-decoration: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .room-card {
+    flex-direction: column;
+  }
+
+  .room-card img {
+    width: 100%;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
